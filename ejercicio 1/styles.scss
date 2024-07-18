@@ -1,0 +1,42 @@
+$base-colors: (
+  1: rgb(101, 199, 183),
+  2: rgb(118, 73, 145),
+  3: rgb(238, 201, 80),
+);
+
+$text-color: rgb(70, 70, 70);
+
+@for $i from 1 through length($base-colors) {
+  //itera sobre los colores del "array" de colores y les asigna un numero
+  $base-color: map-get($base-colors, $i);
+
+  .container-#{$i} {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .box {
+      background-color: $base-color;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      color: $text-color;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+    @for $j from 1 through 4 {
+      .darken-#{$j} {
+        background-color: darken($base-color, $j * 8%);
+        color: lighten($text-color, $j * 20%);
+      }
+
+      .lighten-#{$j} {
+        background-color: lighten($base-color, $j * 8%);
+        color: darken($text-color, $j * 2%);
+      }
+    }
+
+    .base-color {
+      background-color: $base-color;
+    }
+  }
+}

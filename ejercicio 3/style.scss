@@ -1,0 +1,41 @@
+h1 {
+  font-family: roboto;
+  margin: 10px;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  background-color: rgb(71, 119, 158);
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(190, 226, 255);
+  font: {
+    family: roboto;
+    weight: bold;
+  }
+
+  .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    &:hover {
+      background-color: rgb(50, 83, 110);
+      color: rgb(238, 247, 255);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu {
+    flex-direction: column;
+    height: fit-content;
+    margin: 10px;
+    .menu-item {
+      width: 100%;
+      padding: 1rem 0rem;
+    }
+  }
+}
