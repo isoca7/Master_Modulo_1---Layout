@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(224, 224, 224);
+}
+.card1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 300px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  display: grid;
+  gap: 15px;
+  grid-template-rows: 4;
+  grid-template-areas:
+    "imagen"
+    "titulo"
+    "texto"
+    "fecha"
+    "boton";
+  background-color: white;
+
+  .imagen {
+    grid-area: imagen;
+    width: 100%;
+  }
+  .titulo {
+    grid-area: titulo;
+    font-size: 1.5rem;
+    margin: 0 15px;
+  }
+  .texto {
+    margin: 0 15px;
+    grid-area: texto;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .fecha {
+    grid-area: fecha;
+    font-size: 0.7rem;
+    justify-self: end;
+    margin: 0 15px;
+    span {
+      color: green;
+    }
+  }
+  .boton {
+    grid-area: boton;
+    margin: 0 15px 15px;
+    button {
+      background-color: rgb(67, 172, 67);
+      width: 100%;
+      border: none;
+      font-size: 1rem;
+      color: aliceblue;
+      padding: 10px;
+    }
+  }
+}

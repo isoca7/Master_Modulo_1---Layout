@@ -1,0 +1,1 @@
+Se ha realizado una media query para que cuando wl screen width sea menor de 500px el flex-direction se vea en columna
